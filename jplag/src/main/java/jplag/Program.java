@@ -248,12 +248,13 @@ public class Program implements ProgramI {
 		options.setProgress(0);
 		msec = System.currentTimeMillis();
 
-		for (i = 0; i < (size - 1); i++) {
+		//for (i = 0; i < (size - 1); i++) {
+		i = 0;
 			s1 = submissions.elementAt(i);
-			if (s1.struct == null) {
+			/*if (s1.struct == null) {
 				count += (size - i - 1);
 				continue;
-			}
+			}*/
 
 			for (j = (i + 1); j < size; j++) {
 				s2 = submissions.elementAt(j);
@@ -278,7 +279,7 @@ public class Program implements ProgramI {
 				count++;
 				options.setProgress(count * 100 / totalcomps);
 			}
-		}
+		//}
 		options.setProgress(100);
 		long time = System.currentTimeMillis() - msec;
 
@@ -456,6 +457,7 @@ public class Program implements ProgramI {
 		String[] list = new String[included.size()];
 		included.copyInto(list);
 		for (int i = 0; i < list.length; i++) {
+			System.out.println(list[i]);
 			File subm_dir = new File(f, list[i]);
 			if (subm_dir == null || !subm_dir.isDirectory())
 				continue;

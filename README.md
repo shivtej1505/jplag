@@ -1,3 +1,10 @@
+# To Generate jar file:
+`mvn clean generate-sources assembly:assembly` inside the `jplag` directory
+
+
+ 
+
+
 # Download and Run JPlag
 Download a released version - all releases are single-JAR releases.
 
